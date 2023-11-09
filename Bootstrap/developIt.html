@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DevelopIt</title>
+  <!-- fonts -->
+  <script src="https://kit.fontawesome.com/219dfa3b9f.js" crossorigin="anonymous"></script>
+  <style>
+        *{
+          margin: 0;
+          padding: 0;
+        }
+        body{
+          background-color: azure;
+        }
+        .image{
+          width: 380px;
+          height: 300px;
+          margin: 10px;
+        }
+         
+        nav{
+          display: block;
+          height:30px;
+          width: 100%;
+          background-color: whitesmoke;
+          padding-top: 4px;
+        }
+
+        .left{
+          float: left;
+          font-size: larger;
+        }
+
+        .right{
+          float: right;
+          width: 20%;
+          margin-right: 10px;
+          padding-top:3px;
+        }
+        
+        .nav-right{
+          margin-top: 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          list-style: none;
+          color: blue;
+        }
+
+        .center{
+          text-align: center;
+          text-decoration: underline;
+          font-size: x-large;
+          color: orange;
+          margin: 20px;
+        }
+
+        .float{
+          display: flex;
+          text-align: center;
+          justify-content: space-around;
+        }
+
+        /* card */
+        .grid{
+          display: grid;
+          grid-template-columns: auto auto auto; 
+          gap: 30px;
+          padding: 20px;
+          margin: 20px;
+          margin-left: 30px;
+        }
+
+        .card{
+          height:65%;
+          width: 80%;
+          text-align: center;
+          background-color: rgb(255, 255, 255);
+        }
+
+        .card-img{
+          height: 100%;
+          width: 100%;
+        }
+
+        /* footer */
+        .footer{
+          display: flex;
+          justify-content: space-around;
+          background-color: antiquewhite;
+        }
+
+        .block{
+          width: 20%;
+        }
+
+        .head{
+          margin: 10px;
+        }
+
+        .icon-list{
+          list-style: none;
+        }
+
+        .copy{
+          background-color: antiquewhite;
+        }
+
+        /* transitions */
+        .float-img:hover{
+          transition: 800ms ease-in-out;
+          margin-top:-20px;
+        }
+
+        /* animation */
+        .card:hover{
+          animation: bulge 2s;
+          animation-fill-mode: both;
+        }
+
+        @keyframes bulge {
+          from{
+          height:65%;
+          width: 80%;
+          }
+          to{
+            height: 60%;
+            width: 75%;
+          }
+        }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="left">DevelopIT</div>
+    <div class="right">
+      <ul class="nav-right">
+        <li>Free Courses</li>
+        <li>Paid Courses</li>
+        <li>Contact</li>
+        </ul>
+    </div>
+  </nav>
+
+  <p class="center">Free Courses</p>
+  <div class="float">
+    <div class="float-img">
+      <img class="image" src="https://tse4.mm.bing.net/th?id=OIP.jZP8enDDRCcDzJ2PkXmYRwHaE8&pid=Api&P=0&h=180" alt="">
+      <h4>Web Devevlopment</h4>
+    </div>
+    <div class="float-img">
+      <img class="image" src="https://tse3.mm.bing.net/th?id=OIP.i0e422TDic1CXqbKtvnOmgHaEK&pid=Api&P=0&h=180" alt="">
+      <h4>Java</h4>
+    </div>
+    <div class="float-img">
+      <img class="image" src="https://tse2.mm.bing.net/th?id=OIP.gqHCZITcB2XVDsWIJcx8lwHaDt&pid=Api&P=0&h=180" alt="">
+      <h4>Data strutures through Python</h4>
+    </div>
+  </div>
+
+  <p class="center">Paid Courses</p>
+  <div class="grid">
+    <div class="card">
+      <img class="card-img" src="https://tse2.mm.bing.net/th?id=OIP.yo_nxiaHj4cRr4u6I015ZgHaE0&pid=Api&P=0&h=180" alt="">
+      <h4 class="title">ChatGPT</h4>
+      <p class="desc">This course teaches you to get control over chatgpt lilke a pro.</p>
+      <p class="price">7000 Rs. / Price updated 30 mins ago</p>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://i0.wp.com/tecknoworks.com/wp-content/uploads/2019/12/machine-learning-main-scaled.jpeg" alt="">
+      <h4 class="title">Machine Learning</h4>
+      <p class="desc">This courses helps you to understand Machine Learning in better way</p>
+      <p class="price">1000 Rs. / Price updated 3 mins ago</p>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://tse1.mm.bing.net/th?id=OIP.n761kB7V2mlyjCmlCcdyMAHaEU&pid=Api&P=0&h=180" alt="">
+      <h4 class="title">Cyber Security</h4>
+      <p class="desc">This course helps you to excel in cyber security</p>
+      <p class="price">9000 Rs. / Price updated 30 mins ago</p>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="block">
+      <p class="contact head">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact us</p>
+        <ul class="icon-list">
+          <li>
+            <i class="fa-brands fa-instagram">&nbsp;&nbsp;Instagram</i>
+          </li>
+          <li>
+            <i class="fa-brands fa-github">&nbsp;&nbsp;Github</i>
+          </li>
+          <li>
+            <i class="fa-brands fa-linkedin">&nbsp;&nbsp;LinkedIn</i>
+          </li>
+          <li>
+            <i class="fa-brands fa-x-twitter">&nbsp;&nbsp;Twitter</i>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="block about ">
+        <h4 class="head">About us</h4>
+        <p>It is started by Chandu in 2023.You can learn various web development courses with expertise and can get mentor support for your bright future.</p>
+      </div>
+      <div class="block about">
+        <h4 class="head">Products</h4>
+        <ul>
+          <li>Web Development</li>
+          <li>Placement Preparation</li>
+          <li>Advance Technologies</li>
+          <li>AI Tools</li>
+        </ul>
+      </div>
+      <div class="block about">
+        <h4 class="head">About Developer</h4>
+        <p>I'm Chandu, currently pursuing B.Tech in CVR College of Engineering in Hyderabad.Im passionate in responsive websites.</p>
+      </div>
+    </footer>
+    <div class="copy">&copy;copyright 2023</div>
+</body>
+</html>
