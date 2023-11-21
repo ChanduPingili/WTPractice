@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Advance Grid & Flex</title>
+    <style>
+       
+        * {
+        box-sizing: border-box;
+        }
+        .gridCont{
+            display:grid;
+            background-color: rgb(219, 204, 204);
+            grid-template-columns: 20% 25% 25% 23%;
+            gap :20px;
+            width : 70%;
+            padding: 10px;
+            text-align: center;
+        }
+        .item1{
+            background-color:aquamarine;
+            grid-area : 1 /1/4/4;
+            padding:10px;
+            text-align: center;
+            padding-top:19px;
+            animation-name:animate;
+            animation-duration: 2s;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;
+        }
+        .item2, .item3, .item4{
+            background-color:aquamarine;
+            height: 150px;
+            animation-name:animate;
+            animation-duration: 2s;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;
+        }
+        .p1{
+            position: relative;
+            /* visibility: hidden; */
+            background-color: rgb(131, 166, 196);
+            width: 0;
+            height: 5%;
+            visibility:hidden;
+            margin-top:-90px;
+            margin-left: 6%;
+            text-align: center;
+            padding-top:13px;
+            font-weight: bold;
+        }
+        .item1:hover .p1{
+            visibility: visible;
+            width: 90%;
+            height: 8%;
+            transition-duration: 2s;
+        }
+         .item2,.item3,.item4{
+            padding:7px;
+            padding-top:10px;
+        }
+        .item2>img, .item3>img, .item4>img{
+           width:98%;
+           height: 98%;
+        }
+        .item1 > img{
+            position: relative;
+            width: 98%;
+            height: 98%;
+        }
+
+
+        .flexCont{
+            background-color: rgb(219, 204, 204);
+            display:flex;
+            justify-items: center;
+            margin :10px;
+            padding : 10px;
+            text-align: center;
+            width: 70%;
+            height: 20%;
+        }
+
+        .flex1, .flex2, .flex3, .flex4{
+            width : 227px;
+            height :160px;
+            margin: 0 10px;
+            background-color: aquamarine;
+            animation-name: animate;
+            animation-duration: 2s;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;
+        }
+       
+        .flex1>img, .flex2>img, .flex3>img , .flex4>img{
+           width:90%;
+           height: 90%;
+           margin: 8px;
+        }
+        @keyframes animate{
+            from {
+                background-color:aquamarine ;
+            }
+            to{
+                background-color: rgb(105, 125, 237);
+            }
+        }
+
+        @media  only screen and (min-width : 200px) and (max-width : 600px){
+            .gridCont, .flexCont{
+                display: block;
+                background-color:white;
+                width: 100%;
+            }
+            .flex1>img, .flex2>img, .flex3>img , .flex4>img{
+                width:98%;
+                height: 100%;
+            }
+
+            .flex1,.flex2,.flex3,.flex4{
+                margin: 0;
+                padding: 6px;
+                width: 100%;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <center>
+        <div class="gridCont">
+            <div class="item1">
+                <img src="https://images.pexels.com/photos/733745/pexels-photo-733745.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" >
+                <p class="p1">Welocme to my page</p>
+            </div>
+            <div class="item2"><img src="https://images.pexels.com/photos/3593922/pexels-photo-3593922.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></div>
+            <div class="item3"><img src="https://images.pexels.com/photos/1213294/pexels-photo-1213294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            </div>
+            <div class="item4"><img src="https://images.pexels.com/photos/2920064/pexels-photo-2920064.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></div>
+        </div>
+        <div class="flexCont">
+            <div class="flex1"><img src="https://images.pexels.com/photos/3156482/pexels-photo-3156482.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></div>
+            <div class="flex2"><img src="https://images.pexels.com/photos/5086489/pexels-photo-5086489.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></div>
+            <div class="flex3"><img src="https://images.pexels.com/photos/2676096/pexels-photo-2676096.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></div>
+            <div class="flex4"><img src="https://images.pexels.com/photos/2876872/pexels-photo-2876872.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></div>
+        </div>
+    </center>
+</body>
+</html>
