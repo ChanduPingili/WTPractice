@@ -1,0 +1,16 @@
+table, th, td{
+    border: 2px solid red;
+    border-spacing: 2px;
+    text-align: center;
+}
+
+.time{
+    color : darkblue;
+}
+.week{
+    color : green;
+}
+
+.lab3{
+    row-gap: 3;
+}
