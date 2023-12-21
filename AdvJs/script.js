@@ -1,4 +1,4 @@
-
+//prototypal inheritence
 let person={
   name:"Chandu",
   age:20
@@ -8,7 +8,7 @@ let employee={
   role:"Developer",
   __proto__:person
 };
-//colsure
+//closure
 function calAge(born,present){
   function calc(){
           return present-born;
@@ -25,7 +25,7 @@ function age(age, callback){
   console.log(`Employee is set for job : ${callback(age)}`)
 }
 
-//promises
+//async, await
 async function salInc(sal,exp){
   let val= true;
   if(exp >= 5)
@@ -36,7 +36,7 @@ async function salInc(sal,exp){
   }).catch(function(result){
       console.log(result)});
 }
-
+//promises
 function checkExp(value,error){
   return new Promise((resolve,reject) =>{
       if(!error){
