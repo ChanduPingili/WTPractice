@@ -1,5 +1,5 @@
 # WTPractice :
-It contains the Web Technologies programs that I have learned from my academics 
+It contains the Web Technologies programs that I have learned from my academics.
 # Bootstrap :
 contains a web page designed using bootstrap
 # Registration :
